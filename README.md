@@ -1,43 +1,65 @@
-# Controle de Estoque em Java
+# 📦 Sistema de Controle de Estoque em Java
 
-Projeto de console desenvolvido em Java para cadastrar um produto, processar uma venda e exibir o estoque atualizado.
+Aplicação de console desenvolvida em **Java** com foco em simular um fluxo básico de controle de estoque, incluindo cadastro de produto, validação de venda e atualização de inventário.
 
-## Funcionalidades
+---
 
-- Leitura do nome do produto
-- Leitura do preco do produto
-- Leitura da quantidade inicial em estoque
-- Leitura da quantidade vendida
-- Validacao de estoque antes da venda
-- Exibicao dos dados antes e depois da venda
+## 🚀 Objetivo
 
-## Estrutura
+Demonstrar conceitos fundamentais de:
+
+* Programação orientada a objetos (POO)
+* Encapsulamento de dados
+* Regras de negócio aplicadas
+* Interação via terminal (entrada/saída)
+
+---
+
+## ⚙️ Funcionalidades
+
+* Cadastro de produto:
+
+  * Nome
+  * Preço
+  * Quantidade inicial em estoque
+* Processamento de venda
+* Validação de estoque disponível
+* Atualização automática do estoque
+* Exibição dos dados antes e depois da venda
+
+---
+
+## 🧱 Estrutura do Projeto
 
 ```text
 src/
-|-- Apps/
-|   `-- Application.java
-`-- PeopleSystem/
-    `-- Produto.java
+├── Apps/
+│   └── Application.java   # Classe principal (execução)
+└── PeopleSystem/
+    └── Produto.java      # Regra de negócio e entidade Produto
 ```
 
-## Como executar
+---
 
-Compile:
+## ▶️ Como Executar
+
+### 1. Compilar o projeto
 
 ```bash
 javac src/PeopleSystem/Produto.java src/Apps/Application.java
 ```
 
-Execute:
+### 2. Executar a aplicação
 
 ```bash
 java -cp src Apps.Application
 ```
 
-## Print de execucao
+---
 
-Exemplo de entrada:
+## 💻 Exemplo de Execução
+
+### Entrada:
 
 ```text
 Notebook
@@ -46,7 +68,7 @@ Notebook
 2
 ```
 
-Saida registrada no projeto:
+### Saída:
 
 ```text
 Produto: Notebook
@@ -56,16 +78,32 @@ Venda realizada: 2 unidades
 Estoque atualizado: 3 unidades
 ```
 
-Print real da execucao:
+---
 
-![Print de execucao](assets/execucao-ide.png)
+## 📸 Demonstração
 
-## Regra de negocio
+![Execução do sistema](assets/execucao-ide.png)
 
-Se a quantidade vendida for maior que o estoque disponivel, o programa exibe:
+---
+
+## 📏 Regras de Negócio
+
+* A venda só é realizada se houver estoque suficiente.
+* Caso contrário, o sistema exibe:
 
 ```text
 Estoque insuficiente para realizar a venda.
 ```
 
-Nesse caso, o estoque nao e alterado.
+* O estoque permanece inalterado em caso de erro.
+
+---
+
+## 🧠 Conceitos Aplicados
+
+* Programação Orientada a Objetos (POO)
+* Separação de responsabilidades
+* Validação de regras de negócio
+* Estruturação de projeto em camadas simples
+
+
